@@ -14,9 +14,9 @@ export class TuberiasComponent implements OnInit {
   numero_pi: number = Math.PI
   preposiciones: string[] = ['a', 'ante', 'bajo', 'cabe', 'con', 'contra', 'de', 'desde', 'en', 'entre']
   usuarios = [
-    {nombre: "Daniel", apellido: "Muresan", edad: 21},
-    {nombre: "Cristian", apellido: "Muresan", edad: 20},
-    {nombre: "Raul", apellido: "Salazar", edad: 24}
+    {nombre: "Ana", apellido: "Bortion", edad: 21},
+    {nombre: "Sarah", apellido: "Connor", edad: 20},
+    {nombre: "Daniel", apellido: "Muresan", edad: 17}
   ]
   numeroDni: number
 

@@ -17,9 +17,9 @@ export class HomeComponent implements OnInit {
   num1:number = 0
   num2:number = 0
   letras:string[] = ["a","b","c","d","e"]
-  usuarios = [{nombre:"Manolo", apellido:"Lopez"},
-              {nombre:"Raul", apellido:"Salazar"},
-              {nombre:"Jorge", apellido:"Casas"}]
+  usuarios = [{nombre:"Paco", apellido:"Pil"},
+              {nombre:"Aitor", apellido:"Tilla"},
+              {nombre:"Daniel", apellido:"Muresan"}]
 
   usu = {nombre:"",apellido:""}
   mostrarUsuario(usuario) {
