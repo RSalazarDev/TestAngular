@@ -1,0 +1,9 @@
+<p>formulario-clase works!</p>
+<input type="text" placeholder="nombre" [(ngModel)] = "user.nombre">
+<input type="text" placeholder="apellido" [(ngModel)] = "user.apellido">
+<input type="number" placeholder="edad" [(ngModel)] = "user.edad">
+<button (click)="insertar()">Insertar</button>
+<ul>
+    <li *ngFor="let usuario of users"><a routerLink = "/about">{{usuario.nombre + " " + usuario.apellido + " " + usuario.edad}}</a></li>
+</ul>
+

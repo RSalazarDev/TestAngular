@@ -41,24 +41,40 @@
  En la posición {{indice}} de {{cuenta-1}}, que es {{impar? "impar" : "par"}} ,está el número {{numero}}
  que es el {{primero? ", que es el primer elemento del array": ""}} {{ultimo? ", que es el ultimo elemento del array": ""}}</li>
 </ul>
+<br>
 <table class="table">
     <thead>
         <tr>
-            <th></th>
-            <th></th>
-            <th></th>
+            <th>Posicion</th>
+            <th>Par/Impar</th>
+            <th>Numero</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td scope="row"></td>
-            <td></td>
-            <td></td>
+        <tr *ngFor= "let numero of [0,11,22,33,44,55]; let indice = index;
+        let impar=odd; let primero=first; let ultimo=last; let cuenta=count" [ngClass]="{'text-danger':impar,'bg-primary':primero}">
+            <td>{{indice}}</td>
+            <td>{{impar? 'impar':'par'}}</td>
+            <td>{{numero}}</td>
         </tr>
-        <tr>
-            <td scope="row"></td>
-            <td></td>
-            <td></td>
-        </tr>
+        
+
     </tbody>
 </table>
+<br>
+<input type="number" [(ngModel)]=num1>
+
+<select [(ngModel)] = "operador">
+    <option *ngFor = "let operacion of operaciones" [value] = "operacion">{{operacion}}</option>
+</select>
+
+<input type="number" [(ngModel)]=num2>
+
+<div [ngSwitch]="operador">
+    <span *ngSwitchCase = '"suma"'>{{num1+num2}}</span>
+    <span *ngSwitchCase = '"resta"'>{{num1-num2}}</span>
+    <span *ngSwitchCase = '"multi"'>{{num1*num2}}</span>
+    <span *ngSwitchCase = '"div"'>{{num1/num2}}</span>
+    <span *ngSwitchDefault>Selecciona un operador</span>
+</div>
+<br>
