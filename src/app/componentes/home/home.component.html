@@ -1,7 +1,9 @@
+<body>
+<link rel="stylesheet" href="home.component.css">
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-        <h1 class="display-3">Fluid jumbo heading</h1>
-        <p class="lead">Jumbo helper text</p>
+        <h1 class="display-3">Ejercicios de prueba</h1>
+        <p class="lead">Raúl Salazar Roldán</p>
         <hr class="my-2">
         <p>More info</p>
         <p class="lead">
@@ -31,8 +33,8 @@
             <p>{{usu.nombre + " " + usu.apellido}}</p>
         </div>
     </div>
+    <ul>
+        <li *ngFor="let usuario of usuarios2" (click)="mostrarUsuario(usuario)">{{usuario.nombre + " " + usuario.apellido}}</li>
+    </ul>
 </div>
-
-<ul>
-    <li *ngFor="let usuario of usuarios2" (click)="mostrarUsuario(usuario)">{{usuario.nombre + " " + usuario.apellido}}</li>
-</ul>
+</body>

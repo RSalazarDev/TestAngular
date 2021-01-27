@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="crud-local.component.css">
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Titulo</th>
+            <th>Contenido</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr (click) = "notaSeleccionada=nota" *ngFor = "let nota of notas">
+            <td>{{nota.id}}</td>
+            <td>{{nota.titulo}}</td>
+            <td>{{nota.contenido}}</td>
+        </tr>
+        <tr>
+            <td scope="row"></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<input type="text" [(ngModel)] = "notaNueva.titulo" >
+<input type="text" [(ngModel)] = "notaNueva.contenido" >
+<br>
+<button (click)="insertarNota()"> InsertarNota </button>
+<hr>
+<br>
+<input type="number" [(ngModel)] = "notaSeleccionada.id">
+<input type="text" [(ngModel)] = "notaSeleccionada.titulo">
+<input type="text" [(ngModel)] = "notaSeleccionada.contenido">
+<button (click)="editarNota(notaSeleccionada)">Editar Nota</button>
+<button (click)="borrarNota(notaSeleccionada)">Borrar Nota</button>
+<br>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Capital</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr (click) = "empresaSeleccionada=empresa" *ngFor = "let empresa of empresas">
+            <td>{{empresa.id}}</td>
+            <td>{{empresa.nombre}}</td>
+            <td>{{empresa.capital}}</td>
+        </tr>
+        <tr>
+            <td scope="row"></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<input type="text" [(ngModel)] = "empresaNueva.nombre" >
+<input type="number" [(ngModel)] = "empresaNueva.capital" >
+<br>
+<button (click)="insertarEmpresa()"> Insertar Empresa </button>
+<hr>
+<br>
+<input type="number" [(ngModel)] = "empresaSeleccionada.id">
+<input type="text" [(ngModel)] = "empresaSeleccionada.nombre">
+<input type="number" [(ngModel)] = "empresaSeleccionada.capital">
+<button (click)="editarEmpresa(empresaSeleccionada)">Editar Empresa</button>
+<button (click)="borrarEmpresa(empresaSeleccionada)">Borrar Empresa</button>

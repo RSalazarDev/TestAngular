@@ -21,11 +21,14 @@ export class FormularioClaseComponent implements OnInit {
     usu.apellido = this.user.apellido
     usu.edad = this.user.edad
     this.users.push(usu)
+    localStorage.setItem('backup',JSON.stringify(this.users))
 
   }
 
   alertame(entrada:string){
-
+    console.log(entrada)
   }
+
+  
 
 }
