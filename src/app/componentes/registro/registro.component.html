@@ -1,0 +1,31 @@
+<form [formGroup]="formRegister" (submit)="evaluaForm()">
+    <input type="text" formControlName="nombre">
+    <input type="text" formControlName="apellidos">
+    <input type="text" formControlName="password">
+    <input type="text" formControlName="email">
+    <input type="text" formControlName="dni">
+    <input type="text" formControlName="telefono">
+    <button type="submit" [disabled]="!formRegister.valid">Registrar</button>
+</form>>
+
+
+<form [formGroup]="formRegister2" (submit)="evaluaForm()">
+    <input type="text" formControlName="nombre">
+    <input type="text" formControlName="apellidos">
+    <input type="text" formControlName="password">
+    <input type="text" formControlName="email">
+    <input type="text" formControlName="dni">
+    <input type="text" formControlName="telefono">
+    <button type="submit" [disabled]="!formRegister.valid">Registrar</button>
+</form>>
+
+{{dni1.errors|json}}
+<div *ngIf="nombre1.invalid && (nombre1.dirty||nombre1.touched)" class="alert alert-danger">
+<div *ngIf="nombre1.errors.required"><p>Nombre requerido</p></div>
+<div *ngIf="nombre1.errors.minlength"><p>Revisa el nombre, al menos 3 caracteres</p></div>
+</div>
+
+<div *ngIf="email1.invalid && email1.touched" class="alert alert-danger">
+    <div *ngIf="email1.errors.required"><p>Email requerido</p></div>
+    <div *ngIf="email1.errors.email"><p>Revisa el email</p></div>
+    </div>

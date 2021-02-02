@@ -16,8 +16,12 @@ import { TuberiasComponent } from './componentes/tuberias/tuberias.component';
 import { NumerosPipe } from './pipes/numeros.pipe';
 import { DniPipe } from './pipes/dni.pipe';
 import { EstructurasComponent } from './componentes/estructuras/estructuras.component';
+<<<<<<< HEAD
 import { FormularioClaseComponent } from './componentes/formulario-clase/formulario-clase.component';
 import { CrudLocalComponent } from './componentes/crud-local/crud-local.component';
+=======
+import { RegistroComponent } from './componentes/registro/registro.component';
+>>>>>>> b729d11 (SubidaDia02E)
 
 @NgModule({
   declarations: [
@@ -34,8 +38,12 @@ import { CrudLocalComponent } from './componentes/crud-local/crud-local.componen
     NumerosPipe,
     DniPipe,
     EstructurasComponent,
+<<<<<<< HEAD
     FormularioClaseComponent,
     CrudLocalComponent
+=======
+    RegistroComponent
+>>>>>>> b729d11 (SubidaDia02E)
   ],
   imports: [
     BrowserModule,
