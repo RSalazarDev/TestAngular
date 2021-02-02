@@ -8,12 +8,10 @@ import { CalculadoraComponent } from './componentes/calculadora/calculadora.comp
 import { SaludorutaComponent } from './componentes/saludoruta/saludoruta.component';
 import { TuberiasComponent } from './componentes/tuberias/tuberias.component';
 import { EstructurasComponent } from './componentes/estructuras/estructuras.component';
-<<<<<<< HEAD
 import { FormularioClaseComponent } from './componentes/formulario-clase/formulario-clase.component';
 import { CrudLocalComponent } from './componentes/crud-local/crud-local.component';
-=======
 import { RegistroComponent } from './componentes/registro/registro.component';
->>>>>>> b729d11 (SubidaDia02E)
+import { CrudBdComponent } from './componentes/crud-bd/crud-bd.component';
 
 const routes: Routes = [
   {path: "", component:HomeComponent},
@@ -24,12 +22,10 @@ const routes: Routes = [
   {path: "saludoRutaDinamica/:nombre/:apellido", component:SaludorutaComponent},
   {path: "tuberia", component:TuberiasComponent},
   {path: "estructuras", component:EstructurasComponent},
-<<<<<<< HEAD
   {path: "formulario", component:FormularioClaseComponent},
   {path: "crud", component:CrudLocalComponent},
-=======
   {path: "registro", component:RegistroComponent},
->>>>>>> b729d11 (SubidaDia02E)
+  {path: "crud_bd", component:CrudBdComponent},
   {path: "**", component:HomeComponent}
 ];
 

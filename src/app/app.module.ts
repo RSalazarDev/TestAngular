@@ -1,12 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
-import "@angular/common/locales/global/es"
+import "@angular/common/locales/global/es";
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './componentes/about/about.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { NavegacionComponent } from './componentes/navegacion/navegacion.component';
-import { FormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { LoteriaComponent } from './componentes/loteria/loteria.component';
 import { GenerarloteriaComponent } from './componentes/generarloteria/generarloteria.component';
 import { MultiplicarComponent } from './componentes/multiplicar/multiplicar.component';
@@ -16,12 +17,10 @@ import { TuberiasComponent } from './componentes/tuberias/tuberias.component';
 import { NumerosPipe } from './pipes/numeros.pipe';
 import { DniPipe } from './pipes/dni.pipe';
 import { EstructurasComponent } from './componentes/estructuras/estructuras.component';
-<<<<<<< HEAD
 import { FormularioClaseComponent } from './componentes/formulario-clase/formulario-clase.component';
 import { CrudLocalComponent } from './componentes/crud-local/crud-local.component';
-=======
 import { RegistroComponent } from './componentes/registro/registro.component';
->>>>>>> b729d11 (SubidaDia02E)
+import { CrudBdComponent } from './componentes/crud-bd/crud-bd.component';
 
 @NgModule({
   declarations: [
@@ -38,17 +37,17 @@ import { RegistroComponent } from './componentes/registro/registro.component';
     NumerosPipe,
     DniPipe,
     EstructurasComponent,
-<<<<<<< HEAD
     FormularioClaseComponent,
-    CrudLocalComponent
-=======
-    RegistroComponent
->>>>>>> b729d11 (SubidaDia02E)
+    CrudLocalComponent,
+    RegistroComponent,
+    CrudBdComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [{provide:LOCALE_ID, useValue:"es"}],
   bootstrap: [AppComponent]
