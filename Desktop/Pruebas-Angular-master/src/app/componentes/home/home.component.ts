@@ -11,17 +11,17 @@ export class HomeComponent implements OnInit, OnDestroy {
   variable: string= "texto de prueba"
   num1: number = null
   usuarios = [
-    {nombre: "Manolo", apellido: "López"},
-    {nombre: "Rocío", apellido: "García"},
-    {nombre: "Filomena", apellido: "Borrasca"}
+    {nombre: "Adrian", apellido: "Gomez"},
+    {nombre: "Sara", apellido: "Connor"},
+    {nombre: "Rodrigo", apellido: "Gonzalez"}
   ]
   usuarios2: Usuario[] =[
-    {nombre: "Manolo", apellido: "López"},
-    {nombre: "Rocío", apellido: "García"},
-    {nombre: "Filomena", apellido: "Borrasca"}
+    {nombre: "Cristina", apellido: "López"},
+    {nombre: "Ana", apellido: "Martin"},
+    {nombre: "Anselmo", apellido: "García"}
   ]
   usuarioSel
-  usuario3: Usuario = new Usuario("Regina", "Marin")
+  usuario3: Usuario = new Usuario("Raúl", "Salazar")
   selUser(entrada):void{
     this.usuarioSel=entrada
   }
@@ -31,6 +31,6 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
   }
   ngOnDestroy(): void{
-    console.log("Hasta luego Maricarmen")
+    console.log("Hasta lue")
   }
 }
